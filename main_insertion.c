@@ -8,7 +8,7 @@ listint_t *create_node(int n)
     listint_t *node = malloc(sizeof(listint_t));
     if (!node)
         return NULL;
-    node->n = n;
+    node->n = n; /* This should now work if `n` is not const */
     node->prev = NULL;
     node->next = NULL;
     return node;
