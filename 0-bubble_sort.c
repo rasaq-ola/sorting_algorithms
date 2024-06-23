@@ -1,4 +1,5 @@
 #include "sort.h"
+#include <stdio.h>
 
 /**
  * bubble_sort - sorts an array of integers in ascending order
@@ -23,8 +24,28 @@ void bubble_sort(int *array, size_t size)
 				array[i - 1] = array[i];
 				array[i] = tmp;
 				new_n = i;
+				print_array(array, size);  /* Print array after each swap */
 			}
 		}
 		n = new_n;
 	}
+}
+
+/**
+ * print_array - Prints an array of integers
+ *
+ * @array: The array to be printed
+ * @size: Number of elements in @array
+ */
+void print_array(const int *array, size_t size)
+{
+	size_t i;
+
+	for (i = 0; i < size; i++)
+	{
+		if (i > 0)
+			printf(", ");
+		printf("%d", array[i]);
+	}
+	printf("\n");
 }
