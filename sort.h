@@ -12,9 +12,9 @@
  */
 typedef struct listint_s
 {
-    int n; /* Removed the 'const' qualifier */
-    struct listint_s *prev;
-    struct listint_s *next;
+	int n; /* Removed the 'const' qualifier */
+	struct listint_s *prev;
+	struct listint_s *next;
 } listint_t;
 
 void print_list(const listint_t *list);
